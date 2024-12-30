@@ -8,7 +8,7 @@
 extern "C" {
 #endif
 
-void __stdcall asmfunc(int* arr,int* a);
+void __stdcall asmfunc(int arr,int* a);
 
 #ifdef __cplusplus
 }
@@ -30,7 +30,7 @@ int main() {
 getch();
 
     
-    asmfunc(arr,&a); //assembly proc calling
+    asmfunc(arr,a); //assembly proc calling
    
    getch();
     
