@@ -1,14 +1,9 @@
-
 #include <stdio.h>
-
-
-//extern "C" void __stdcall asmfunc(void);
-
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-void __stdcall asmfunc(int arr,int* a);
+void __stdcall asmfunc(int p1 ,int *p2);
 
 #ifdef __cplusplus
 }
@@ -17,25 +12,18 @@ void __stdcall asmfunc(int arr,int* a);
 
 int main() {
     system("cls");
-    int arr[5]={4,5,9,7,3};
-    int a=0;
-    printf("The array is");
-    for(int i=0;i<6;i++){
-        printf("%d",arr[i]);
-        printf(" ");
-    }
-        printf("\n");
-
-    
+    int arry[] = {1,8,6,0,6,8,6,3};
+    int a1 = 0;
+    printf("assembly proc calling from  from C! \n");
 getch();
-
     
-    asmfunc(arr,a); //assembly proc calling
+    
+    asmfunc(arry,&a1);
    
-   getch();
+    getch();
     
     
-    printf("The total positive number will be  %d",a); // printing in c
+    printf("\nTotal no of non zero's are:  %d\n",a1);        // printing in c
     
   
     
